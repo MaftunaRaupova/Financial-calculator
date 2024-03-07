@@ -49,7 +49,7 @@ and return the total cost of the car rental. Fixed rate was given for daily rent
 """
 
 def car_rental(rental_days):
-    day_rental_cost = 20
+    day_rental_cost = 50
     rental_cost = rental_days * day_rental_cost
     return rental_cost
 
