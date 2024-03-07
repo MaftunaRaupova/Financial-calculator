@@ -1,7 +1,7 @@
 """ The code will calculate total holiday cost which includes flight, hotel and car rental. 
 It will ask the user to choose the city, the lenght of stay and the car rental days. """
 
-user_input_city = input("Please choose the city you would like to travel (London, Amsterdam, Egypt, New York): ")
+user_input_city = input("Please choose the city you would like to travel (London, Amsterdam, Egypt, New York, Dubai, Jordan): ")
 
 num_nights = int(input("Please enter the number of days you would like to stay: "))
 
@@ -13,7 +13,7 @@ rental_days = int(input("Please enter the days you would like to rent a car: "))
 and return a total cost for the hotel stay. The different for each city. """
 
 def hotel_cost(total_nights: int, city: str) -> int:
-    city_cost_map = {"LONDON": 250, "AMSTERDAM": 200, "EGYPT": 150, "NEW YORK": 300}
+    city_cost_map = {"LONDON": 250, "AMSTERDAM": 200, "EGYPT": 150, "NEW YORK": 300, "Dubai": 500, "Jordan": 450}
     city_cost = city_cost_map[city.upper()]
     stay_cost = city_cost * total_nights
     return stay_cost
@@ -35,6 +35,10 @@ def plane_cost(city_flight: str) ->int:
             return 250
         case "NEW YORK": 
             return 400
+        case "Dubai": 
+            return 500
+        case "Jordan": 
+            return 450
     
 total_flight_cost = plane_cost(user_input_city)
 
